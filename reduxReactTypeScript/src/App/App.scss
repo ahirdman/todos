@@ -1,0 +1,14 @@
+@use '../base';
+
+.header {
+  @include base.main;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  &__title {
+    text-align: center;
+    margin: .5em;
+  }
+}
+

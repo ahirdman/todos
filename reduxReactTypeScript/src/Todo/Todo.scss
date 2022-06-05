@@ -1,0 +1,57 @@
+@use '../base';
+
+.todo {
+  @include base.main;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+  padding: 1em;
+  flex: 100%;
+  list-style-position: inside;
+  list-style-type: none;
+  border-radius: .5em;
+
+  &__description {
+    margin-top: 1em;
+  }
+
+  &--completed {
+    order: 1;
+    background-color: base.$green-color;
+    color: white;
+  }
+  
+  &--toggle-completed {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    background-image: base.$gradient;
+    box-shadow: base.$main-box-shadow;
+
+    &:hover { border: 2px solid white; }
+  }
+
+  &__button {
+    visibility: hidden;
+    height: 2.5em;
+    width: 2.5em;
+    position: relative;
+    bottom: 6.5em;
+    left: 5.1em;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: base.$main-box-shadow;
+    background-color: base.$red-color;
+    color: white;
+
+    &:hover {
+      border: 2px solid black;
+      color: black;
+    }
+    
+    &--remove {
+      visibility: visible;
+    }
+  }
+
+}

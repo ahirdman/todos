@@ -1,0 +1,54 @@
+@use '../base';
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+  max-width: 25rem;
+
+  &__input-description,
+  &__input-title {
+    height: 2em;
+    margin: .1em 1em 1.5em 1em;
+    flex: 100%;
+    border: none;
+    border-radius: .3em;
+    padding-left: .5em;
+
+    &:focus { outline: none; }
+  }
+
+
+  &__description,
+  &__title {
+    flex: 100%;
+    font-weight: bold;
+    position: relative;
+    left: .8em
+  }
+
+  &__button {
+    height: 2em;
+    flex: 100%;
+    max-width: 10em;
+    background: none;
+    border: 2px solid base.$orange-color;
+    border-radius: .3em;
+    color: base.$orange-color;
+    font-weight: bold;
+
+    &:hover {
+      background-image: base.$gradient;
+      color: white;
+    }
+  }
+
+}
+
+@media screen and (min-width: 400px) {
+  .form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

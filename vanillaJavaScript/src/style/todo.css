@@ -1,0 +1,149 @@
+:root {
+  --main-bg-color: #12181B;
+  --secondary-bg-color: #2A2E34;
+  --main-text-color: #B0BDCC;
+  --red-color: #ED4857;
+  --orange-color: #FA7E45;
+  --green-color: #0BC371;
+  --gradient: linear-gradient(45deg, var(--orange-color), var(--red-color));
+  --main-box-shadow: .05em .05em .5em black;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--main-text-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  background-color: var(--secondary-bg-color);
+  box-shadow: var(--main-box-shadow);
+}
+
+.header__title {
+  text-align: center;
+  margin: .5em;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+  max-width: 25rem;
+}
+
+.form__input-description,
+.form__input-title {
+  height: 2em;
+  margin: .1em 1em 1.5em 1em;
+  flex: 100%;
+  border: none;
+  border-radius: .3em;
+  padding-left: .5em;
+}
+
+.form__input-description:focus,
+.form__input-title:focus {
+  outline: none;
+}
+
+.form__description,
+.form__title {
+  flex: 100%;
+  font-weight: bold;
+  position: relative;
+  left: .8em
+}
+
+.form__button {
+  height: 2em;
+  flex: 100%;
+  max-width: 10em;
+  background: none;
+  border: 2px solid var(--orange-color);
+  border-radius: .3em;
+  color: var(--orange-color);
+  font-weight: bold;
+}
+
+.form__button:hover {
+  background-image: var(--gradient);
+  color: white;
+}
+
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+  padding: 1em;
+  flex: 100%;
+  list-style-position: inside;
+  list-style-type: none;
+  border-radius: .5em;
+  box-shadow: var(--main-box-shadow);
+  background-color: var(--secondary-bg-color);
+}
+
+.card:hover {
+  background: var(--gradient);
+  color: white;
+}
+
+
+.card--complete {
+  order: 1;
+  background-color: var(--green-color);
+  color: white;
+}
+
+.card__description {
+  margin-top: 1em;
+}
+
+.card__button {
+  height: 2.5em;
+  width: 2.5em;
+  position: relative;
+  bottom: 2em;
+  left: 2em;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: var(--main-box-shadow);
+  background-color: var(--red-color);
+  color: white;
+}
+
+.card__button:hover {
+  border: 2px solid black;
+  color: black;
+}
+
+.card__button--hidden {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 460px) {
+  .form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

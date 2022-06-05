@@ -1,0 +1,34 @@
+$main-bg-color: #12181B;
+$secondary-bg-color: #2A2E34;
+$main-text-color: #B0BDCC;
+$red-color: #ED4857;
+$orange-color: #FA7E45;
+$green-color: #0BC371;
+$gradient: linear-gradient(45deg, $orange-color, $red-color);
+$main-box-shadow: .05em .05em .5em black;
+
+@mixin main {
+  background-color: $secondary-bg-color;
+  box-shadow: $main-box-shadow;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $main-text-color;
+  background-color: $main-bg-color;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

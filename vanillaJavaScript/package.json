@@ -1,0 +1,22 @@
+{
+  "name": "vanilla-todo",
+  "version": "1.0.0",
+  "description": "a basic todo app in vanilla js, based on state",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "dev": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.1"
+  },
+  "dependencies": {
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
